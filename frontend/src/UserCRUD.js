@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 // 💡 CORRECCIÓN 1: Leer la URL de la API de la variable de entorno de Vercel/Vite
-const API_BASE_URL = import.meta.env.VITE_API_URL; 
+const API_BASE_URL = process.env.REACT_APP_API_URL; 
 
 // Verificación para desarrollo (opcional)
 if (!API_BASE_URL) {

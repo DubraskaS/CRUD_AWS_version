@@ -14,6 +14,7 @@
     "lucide-react": "^0.302.0"
   },
   "scripts": {
+    "dev": "npx vite",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
