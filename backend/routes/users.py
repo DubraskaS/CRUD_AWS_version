@@ -25,9 +25,9 @@ def handle_users():
     elif request.method == 'POST':
         try:
             data = request.get_json()
-            nombre = data.get('nombre')
-            correo = data.get('correo')
-            edad = data.get('edad')
+            nombre = data.get('name')
+            correo = data.get('email')
+            edad = data.get('age')
 
             # Validar datos
             if not nombre or not correo or not edad:
@@ -71,9 +71,9 @@ def handle_user_by_id(user_id):
     # --- PUT: Actualizar usuario ---
     elif request.method == 'PUT':
         data = request.get_json()
-        nombre = data.get('nombre')
-        correo = data.get('correo')
-        edad = data.get('edad')
+        nombre = data.get('name')
+        correo = data.get('email')
+        edad = data.get('age')
 
         if not nombre or not correo or not edad:
             return jsonify({"error": "Faltan campos obligatorios para actualizar."}), 400
