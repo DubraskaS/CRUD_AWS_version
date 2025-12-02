@@ -86,9 +86,9 @@ def get_all_users():
                 for user in users_raw:
                     users.append({
                         'id': user[0],
-                        'nombre': user[1],
-                        'correo': user[2],
-                        'edad': user[3]
+                        'name': user[1],
+                        'email': user[2],
+                        'age': user[3]
                     })
                 
     except Exception as e:
@@ -144,9 +144,9 @@ def create_new_user(nombre, correo, edad):
                 if new_user_raw:
                     new_user = {
                         'id': new_user_raw[0],
-                        'nombre': new_user_raw[1],
-                        'correo': new_user_raw[2],
-                        'edad': new_user_raw[3]
+                        'name': new_user_raw[1],
+                        'email': new_user_raw[2],
+                        'age': new_user_raw[3]
                     }
                     
     except psycopg2.errors.UniqueViolation:
@@ -179,9 +179,9 @@ def update_existing_user(user_id, nombre, correo, edad):
                 if updated_user_raw:
                     updated_user = {
                         'id': updated_user_raw[0],
-                        'nombre': updated_user_raw[1],
-                        'correo': updated_user_raw[2],
-                        'edad': updated_user_raw[3]
+                        'name': updated_user_raw[1],
+                        'email': updated_user_raw[2],
+                        'age': updated_user_raw[3]
                     }
 
     except psycopg2.errors.UniqueViolation:
@@ -241,9 +241,9 @@ def search_users(query):
                 for user in users_raw:
                     results.append({
                         'id': user[0],
-                        'nombre': user[1],
-                        'correo': user[2],
-                        'edad': user[3]
+                        'name': user[1],
+                        'email': user[2],
+                        'age': user[3]
                     })
                     
     except Exception as e:
